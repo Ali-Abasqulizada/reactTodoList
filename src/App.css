@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #1E90FF;
+}
+
+main {
+  margin-top: 100px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1E90FF;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+form input[type="text"] {
+  font-size: 18px;
+  width: 250px;
+  padding: 10px;
+  flex-grow: 0.7;
+  border: 2px solid blue;
+  border-radius: 8px;
+  background-color: #1E90FF;
+  color: white;
+}
+
+form input[type="text"]::placeholder {
+  color: white;
+}
+
+form input[type="text"]:hover {
+  cursor: pointer;
+  color: #1E90FF;
+  background-color: white;
+  transition-duration: 0.5s;
+}
+
+form input[type="text"]:hover::placeholder {
+  color: #1E90FF;
+}
+
+form button {
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 8px;
+  background-color: #1E90FF;
+  color: white;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+form button:hover {
+  cursor: pointer;
+  color: #1E90FF;
+  background-color: white;
+  transform: scale(1.1);
+}
+
+div.task {
+  font-size: 20px;
+  width: 400px;
+  padding: 10px;
+  background-color: #1E90FF;
+  margin-top: 10px;
+  border: 2px solid blue;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.3s linear;
+}
+
+.checkbox-container {
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+
+/* 
+li:hover {
+  cursor: pointer;
+  color: #1E90FF;
+  background-color: white;
+} */
+
+div.task svg {
+  height: 20px;
+  height: 20px;
+  fill: white;
+}
+
+div.task .check {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+div.task.done {
+  opacity: 0.3;
+}
+
+div.task-name {
+  flex-grow: 1;
+}
+
+div.task span {
+  position: relative;
+  flex-grow: 1;
+}
+
+div.task span::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 15px;
+  transition: width 0.1s linear;
+}
+
+div.task.done span::before {
+  width: 100%;
+}
+
+button.trash {
+  width: 20px;
+  height: 20px;
+  background-color: #1E90FF;
+}
+
+button.trash svg {
+  width: 20px;
+  height: 20px;
+  transition-duration: 0.3s;
+}
+
+button.trash:hover svg {
+  fill: red;
+}
